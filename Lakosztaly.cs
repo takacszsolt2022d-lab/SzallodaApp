@@ -8,6 +8,19 @@ namespace SzallodaApp
     {
         public int ExtraSzolgaltatasAr { get; set; }
 
-        publ
+        public Lakosztaly(int szobaszam,int alapar,int extra) : base(szobaszam, alapar)
+        {
+            extra = ExtraSzolgaltatasAr;
+        }
+
+        public override int ArKiszamitas(int ejszakakSzama)
+        {
+            return (ejszakakSzama*alapar) + ExtraSzolgaltatasAr;
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} (Extra szolgáltatás: {ExtraSzolgaltatasAr} Ft)";
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace SzallodaApp
@@ -16,14 +17,20 @@ namespace SzallodaApp
                     Console.WriteLine("Nem lehet kisebb vagy 0.");
                 }
             } }
+        public Szoba(int szobaszam, int alapar)
+        {
+            szobaszam = Szobaszam;
+            alapar = Alapar;
+            
 
+        }
         public virtual int ArKiszamitas(int ejszakakSzama)
         {
             return ejszakakSzama * Alapar;
         }
         public override string ToString()
         {
-            return "Szoba [Szobaszam] | Alapár: [Alapar] Ft/éj";
+            return $"Szoba {Szobaszam} | Alapár: {Alapar} Ft/éj";
         }
     }
 }
