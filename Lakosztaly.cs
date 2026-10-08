@@ -8,14 +8,14 @@ namespace SzallodaApp
     {
         public int ExtraSzolgaltatasAr { get; set; }
 
-        public Lakosztaly(int szobaszam,int alapar,int extra) : base(szobaszam, alapar)
+        public Lakosztaly(int szobaszam,int ar,int extra) : base(szobaszam, ar)
         {
             extra = ExtraSzolgaltatasAr;
         }
 
         public override int ArKiszamitas(int ejszakakSzama)
         {
-            return (ejszakakSzama*alapar) + ExtraSzolgaltatasAr;
+            return base.ArKiszamitas(ejszakakSzama)+ExtraSzolgaltatasAr;
         }
 
         public override string ToString()

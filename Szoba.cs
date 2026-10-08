@@ -10,17 +10,18 @@ namespace SzallodaApp
         public int Szobaszam { get; }
         protected int alapar;
 
-        public int Alapar { get; set
+        public int Alapar {
+            get { return alapar;} 
+            set
             {
-                if (alapar <= 0)
-                {
-                    Console.WriteLine("Nem lehet kisebb vagy 0.");
-                }
-            } }
-        public Szoba(int szobaszam, int alapar)
+                if (alapar >0) alapar=value;
+            } 
+        }
+
+        public Szoba(int szobaszam, int ar)
         {
             szobaszam = Szobaszam;
-            alapar = Alapar;
+            ar = Alapar;
             
 
         }
